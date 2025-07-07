@@ -1,2 +1,5 @@
 # personal_projects
-my personal projects
+My personal projects :)
+
+## Stay tuned for awesome features and stuff :)
+
