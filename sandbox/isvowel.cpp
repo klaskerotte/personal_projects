@@ -34,12 +34,60 @@ void analyzestring(const std::string &inputstring)
     }
 }
 
+enum chartype
+{
+    vowel,
+    consonant,
+    nonalpha
+};
+
+chartype analyzechar(char &inputchar)
+{
+    std::string vowels = "aeiouyAEIOUY";
+    std::string numbers = "0123456789";
+
+    if (vowels.find(inputchar) != std::string::npos)
+    {
+        return vowel;
+    }
+    else if (numbers.find(inputchar) != std::string::npos)
+    {
+        return nonalpha;
+    }
+    else
+    {
+        return consonant;
+    }
+};
+
 int main()
 {
 
-    std::string mystring = "Jalla ahhh script";
+    int conditionsum = 0;
+    int vowelscounted = 0;
+    int consonantscounted = 0;
+    char fromuser;
 
-    analyzestring(mystring);
+    std::cout << "Enter a character to add to the counters, type a number to stop" << std::endl;
+    while (conditionsum < 1)
+    {
+        std::cout << "Vowels counted " << vowelscounted << " Consonants counted " << consonantscounted << std::endl;
+        std::cout << "Enter input" << std::endl;
+        std::cin >> fromuser;
+        chartype temp = analyzechar(fromuser);
+        switch (temp)
+        {
+        case 0:
+            vowelscounted++;
+            continue;
+        case 1:
+            consonantscounted++;
+            continue;
+        case 2:
+            conditionsum++;
+            continue;
+        }
+    }
 
     return 0;
 }
