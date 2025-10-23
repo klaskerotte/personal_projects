@@ -79,13 +79,13 @@ int main()
         {
         case 0:
             vowelscounted++;
-            continue;
+            break;
         case 1:
             consonantscounted++;
-            continue;
+            break;
         case 2:
             conditionsum++;
-            continue;
+            break;
         }
     }
 
