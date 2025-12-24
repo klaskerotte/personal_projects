@@ -57,7 +57,7 @@ public:
                         bool &active_flag) {
     std::string coordinate;
 
-    std::cout << "What coordinate does player " << player_flag
+    std::cout << "\nWhat coordinate does player " << player_flag
               << " want to choose? \nGive input in the form of two integers "
                  "choosing row and column"
               << std::endl;
@@ -138,7 +138,7 @@ int main() {
     tictactoe.drawboard();
 
     if (tictactoe.turn >= 9) {
-      std::cout << "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% \n"
+      std::cout << "\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% \n"
                 << std::endl;
       std::cout << "\tGame is over, reloading new board" << std::endl;
       std::cout << "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% \n"
@@ -148,6 +148,7 @@ int main() {
       tictactoe.init_board(tictactoe.board);
       tictactoe.turn = 0;
       clear();
+      tictactoe.drawboard();
     }
   }
   clear();
