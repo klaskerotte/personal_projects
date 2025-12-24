@@ -141,7 +141,7 @@ int main() {
       std::cout << "\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% \n"
                 << std::endl;
       std::cout << "\tGame is over, reloading new board" << std::endl;
-      std::cout << "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% \n"
+      std::cout << "\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% \n"
                 << std::endl;
       std::this_thread::sleep_for(std::chrono::milliseconds(2500));
 
